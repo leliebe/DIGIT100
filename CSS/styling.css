@@ -38,3 +38,7 @@ header.resume {
 	padding-top: 5%;
 	text-align: center;
 }
+
+td.right {
+	padding-left: 25;
+}
