@@ -1,12 +1,13 @@
 ul.nav {
 	list-style-type: none;
-  overflow: hidden;
+
 	background-color: #3495eb;
 	position: fixed; /* Set the navbar to fixed position */
  	top: 0; /* Position the navbar at the top of the page */
+	padding-left: 0;
+	padding-right: 0;
 	left: 0;
-	right: 0;
- 	width: 100%;
+	width: 100%;
 }
 
 li.nav {
@@ -31,4 +32,8 @@ li.nav a:hover {
 ul.nodot {
 	list-style-type: none;
 	margin-left: 8%;
+}
+
+header {
+	padding-top: 50;
 }
