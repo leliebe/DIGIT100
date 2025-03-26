@@ -10,16 +10,16 @@
          Extensive research did not uncover any evidence that
          the U.S. copyright on this publication was renewed.]</note>
 
-            <note type="editorial" rend="italic">_Here is a totally different story that we can
+            <note type="editorial" rend="italic">Here is a totally different story that we can
            highly recommend to you. We could wax rhapsodical
            in our praise, as the story is one of the finest
          pieces of literature it has been our good fortune to
             read. The theme is original, and yet fantastic
             enough to make it rise head and shoulders above
           many contemporary scientifiction stories. You will
-             not regret having read this marvellous tale._</note>
+             not regret having read this marvellous tale.</note>
 </frontmatter>
-
+<body>
 <p>West of Arkham the hills rise wild, and there are valleys with deep
 woods that no axe has ever cut. There are dark narrow glens where the
 trees slope fantastically, and where thin brooklets trickle without
@@ -39,7 +39,7 @@ Pierce has never told them of anything he recalls from the strange
 days. Ammi, whose head has been a little queer for years, is the only
 one who still remains, or who ever talks of the strange days; and he
 dares to do this because his house is so near the open fields and the
-travelled roads around <place>Arkham</place>.</p>
+travelled roads around Arkham.</p>
 
 <p>There was once a road over the hills and through the valleys, that ran
 straight where the blasted heath is now; but people ceased to use it
@@ -938,7 +938,7 @@ their sapling and run off with the democrat-wagon.</p>
 were exchanged. "It spreads on everything organic that's been around
 here," muttered the medical examiner. No one replied, but the man who
 had been in the well gave a hint that his long pole must have stirred
-up something intangible. "It was awful," he added. "There was no bottom
+up something intangible. <dialogue speaker="Man-in-well">"It was awful,"</dialogue> he added. "There was no bottom
 at all. Just ooze and bubbles and the feeling of something lurking
 under there." Ammi's horse still pawed and screamed deafeningly in
 the road outside, and nearly drowned its owner's faint quaver as he
@@ -1121,7 +1121,9 @@ such a good old man--when the reservoir gang gets to work I must write
 the chief engineer to keep a sharp watch on him. I would hate to think
 of him as the grey, twisted, brittle monstrosity which persists more
 and more in troubling my sleep.</p>
+</body>
 
 
                                 <end>THE END</end>
 </text>
+</xml>
