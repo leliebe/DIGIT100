@@ -42,3 +42,21 @@ header.resume {
 td.right {
 	padding-left: 25;
 }
+
+h1 {
+	margin-top: 7%;
+	text-align: center;
+}
+
+iframe.eliza {
+	padding-left: 5%;
+	flex-grow: 2;
+	border: none;
+	margin-top: -2%
+}
+
+div.eliza {
+	display: flex;
+	flex-flow: row;
+	height: 100%
+}
