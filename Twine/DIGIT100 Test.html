@@ -18,10 +18,7 @@ tw-passage {
   font-size: 20px;
   text-align: center;
 }
-
-seg.upstream {
-  color: red;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="700,300" size="100,100">(text-color:yellow)[You see (text-colour:green)[//two//] pathways before you.]
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="700,300" size="100,100">(text-color:yellow)[You see (text-colour:green)[//two//] pathways before you.]
 
 (text-rotate-x:176)+(text-rotate-y:172)+(text-rotate-z:139)[(text-colour:#99ddff)[[[Go left.-&gt;River]]]]
 (text-rotate-z:44)[[[Go right.-&gt;Cave]]]
@@ -30,12 +27,18 @@ seg.upstream {
 This is a cave. 
 
 [[Pick up a rock-&gt;Got rock]]
-[[Go north-&gt;North]]</tw-passagedata><tw-passagedata pid="3" name="River" tags="" position="700,425" size="100,100">This is a river. 
+[[Go north-&gt;North]]</tw-passagedata><tw-passagedata pid="3" name="River" tags="" position="700,425" size="100,100">(bg: &quot;./river.jpg&quot;)[
 
-(b4r:&quot;solid&quot;)+(corner-radius:10)[[Go upstream-&gt;Upstream]]
-[[Go downstream-&gt;Downstream]]
-[[Try to cross-&gt;Far Shore]]
-</tw-passagedata><tw-passagedata pid="4" name="Downstream" tags="" position="825,550" size="100,100"></tw-passagedata><tw-passagedata pid="5" name="Far Shore" tags="" position="575,550" size="100,100"></tw-passagedata><tw-passagedata pid="6" name="Got rock" tags="" position="1025,450" size="100,100">(if:visits is 3)[
+This is a river. 
+
+(b4r:&quot;solid&quot;)+(corner-radius:10)+(bg:blue)[[Go upstream-&gt;Upstream]]
+(b4r:&quot;dotted&quot;)+(corner-radius:30)[[Go downstream-&gt;Downstream]]
+[[Try to cross-&gt;Far Shore]]]
+</tw-passagedata><tw-passagedata pid="4" name="Downstream" tags="" position="825,550" size="100,100">(if: $rock &gt;= 1)[
+You&#39;ve entered this passage with at least one rock. Good job!]
+
+(else: )[
+You don&#39;t seem to have any rocks]</tw-passagedata><tw-passagedata pid="5" name="Far Shore" tags="" position="575,550" size="100,100"></tw-passagedata><tw-passagedata pid="6" name="Got rock" tags="" position="1025,450" size="100,100">(if:visits is 3)[
 Try as you might, you can&#39;t find another rock small enough to put in your pocket.]
 
 (else: )[
@@ -45,12 +48,19 @@ You got a rock!]
 
 [[Cave]]
 [[Downstream]]
-</tw-passagedata><tw-passagedata pid="7" name="North" tags="" position="825,675" size="100,100"></tw-passagedata><tw-passagedata pid="8" name="Name Set" tags="" position="700,25" size="100,100">&lt;!--This is a note! It won&#39;t appear in game.--&gt;
+</tw-passagedata><tw-passagedata pid="7" name="North" tags="" position="725,875" size="100,100">You are in a small forest. 
+
+(if: $talked is true)[The person helps you later on.]
+
+(else: )[Nothing happens]</tw-passagedata><tw-passagedata pid="8" name="Name Set" tags="" position="700,25" size="100,100">&lt;!--This is a note! It won&#39;t appear in game.--&gt;
 
 What is your name? 
 (input-box:2bind $name,&quot;===XXXX===&quot;,&quot;Name&quot;)
 
-[[Continue]]</tw-passagedata><tw-passagedata pid="9" name="Continue" tags="" position="725,150" size="100,100">$name. Good to meet you! 
+
+And what is your favorite color? 
+(input-box:2bind $color,&quot;===XXXX===&quot;,&quot;Color&quot;)
+[[Continue]]</tw-passagedata><tw-passagedata pid="9" name="Continue" tags="" position="725,150" size="100,100">$name. Good to meet you! Too bad I hate the color $color. 
 
 [[Start]]
 
@@ -61,7 +71,18 @@ Your browser does not support the audio element.
 &lt;/audio&gt; </tw-passagedata><tw-passagedata pid="10" name="Setup" tags="" position="300,100" size="100,100">(set: $rock to 0)
 (set: $health to 100)
 
-</tw-passagedata><tw-passagedata pid="11" name="Upstream" tags="" position="700,550" size="100,100"></tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="11" name="Upstream" tags="" position="700,550" size="100,100">You see a person standing here. 
+
+[[Talk to them]]
+[[Ignore them]]</tw-passagedata><tw-passagedata pid="12" name="Talk to them" tags="" position="512.5,675" size="100,100">(set: $talked to true) 
+
+&quot;Hello,&quot; you say. 
+
+&quot;Hello,&quot; the person answers. 
+
+[[Continue-&gt;North]]</tw-passagedata><tw-passagedata pid="13" name="Ignore them" tags="" position="700,675" size="100,100">You continue on. 
+
+[[Continue-&gt;North]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
